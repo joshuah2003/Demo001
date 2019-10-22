@@ -1,1 +1,10 @@
-Additional Changes to this file
+Additional Changes to this file.
+
+BEGIN CATCH
+
+	If (@@TRANCOUNT > 0)
+		ROLLBACK TRAN;
+
+	;THROW;
+
+END CATCH
